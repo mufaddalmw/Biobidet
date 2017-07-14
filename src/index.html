@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<link rel="stylesheet" href="http://biobidet.com/css/normalize.min.css">
+<link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+<!-- Swiper -->
+<div class="swiper-container team-slider" id="team-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="team in teams">
+          <figure>
+            <img :src="team.img" :alt="team.name">
+            <figcaption class="team-slider__content">
+              <div class="team-slider__name">
+                {{ team.name }}
+              </div>
+              <div class="team-slider__role">
+                {{ team.role }}
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+    </div>
+    <!-- Add Controls -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<script type="text/javascript" src="http://biobidet.com/js/vendor/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+var app = new Vue({
+  el: '#team-slider',
+    data: {
+      teams: [
+        {
+          name: 'Joanna Griffiths',
+          role: 'Co-founder',
+          img: 'img/team/1.jpg'
+        },
+        {
+          name: 'Barbara Sahakia',
+          role: 'Manager',
+          img: 'img/team/2.jpg'
+        },
+        {
+          name: 'Alberto Giubilini',
+          role: 'Designer',
+          img: 'img/team/3.jpg'
+        }
+      ]
+    }
+})
+
+// initialize swiper
+var swiper = new Swiper('#team-slider', {
+		// Navigation arrows
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    slidesPerView: 3,
+    centeredSlides: true,
+    paginationClickable: true,
+    spaceBetween: 0,
+		speed:500,
+		pagination: '.swiper-pagination',
+    paginationClickable: true
+});
+</script>
+  </body>
+</html>
