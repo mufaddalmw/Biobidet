@@ -460,3 +460,19 @@ iframe{border: none; overflow: hidden;}
 	opacity: 1;
 	transform: translateY(0);
 }
+.team-slider .swiper-button-next {
+	right:30%;
+	background-image: none;
+	padding-top:10px;
+}
+.team-slider .swiper-button-next svg {
+	fill:#fff;
+}
+.team-slider .swiper-button-prev {
+	left:30%;
+	background-image: none;
+	padding-top:10px;
+}
+.team-slider .swiper-button-prev svg {
+	fill:#fff;
+}
